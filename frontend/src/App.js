@@ -8,7 +8,7 @@ import Profile from './components/profile/Profile'
 import actions from './services/index'
 import axios from 'axios'
 
-var url = 'http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15'
+var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`
 
 var headers = {
   "X-Api-Key":"3d317330f7724477a808676552aeec15"
@@ -31,24 +31,6 @@ class App extends Component {
     newsEvents:newsEvents.data,
 })
   }
-
-// componentDidMount() {
-//   axios.get(url, headers
-//   ).then(res => {
-//     console.log(res.data.events);
-//     this.setState({
-//       newevents: res.data.events,
-//     });
-//   });
-// }
-
-
-  
-
-  
-
-
-
 
   setUser = (user) => this.setState(user)
   
