@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import actions from '../../services/index'
 
 class SignUp extends Component {
+
+    
     state = {
 
     } 
@@ -10,6 +12,7 @@ class SignUp extends Component {
     handleSubmit =  e => {
         e.preventDefault()
             actions.signUp(this.state).then(user=> {
+                console.log(user)
                 this.props.setUser({...user.data})  
             }).catch(({ response }) => console.error(response.data));
     }
@@ -22,6 +25,7 @@ class SignUp extends Component {
                     <input name="password" type="password" onChange={this.handleChange} />
                     <input type="submit" value="Sign Up"/>
                 </form>
+                
             </Fragment>
         );
     }

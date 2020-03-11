@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import actions from '../../services/index'
+// import './App.css';
+// import axios from 'axios';
 
 
 class Home extends Component {
@@ -10,7 +12,6 @@ class Home extends Component {
     return (
       <div>
         
-
       </div>
     );
   }

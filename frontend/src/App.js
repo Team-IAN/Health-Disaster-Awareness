@@ -23,7 +23,7 @@ class App extends Component {
   async componentDidMount() {
     let user = await actions.isLoggedIn()
     this.setState({...user.data})
-    console.log('coolest ')
+    console.log('coolest')
     let newsEvents = await axios.get(url, headers)   
   console.log(newsEvents.data)
 
