@@ -16,7 +16,7 @@ class LogIn extends Component {
         }).catch(({ response }) => console.error(response.data));
     }
     render() {
-        console.log(this.props)
+        //console.log(this.props)
         return (
             <Fragment>
                 <h2>LogIn</h2>

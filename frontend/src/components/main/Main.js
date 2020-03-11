@@ -25,37 +25,30 @@ class Main extends Component {
   //     this.setState({ [name]: value });
   //   };
 
+  showArticles = () => {
+      return this.props.newsEvents.articles.map((eachArticle, index) => {
+          return (
+              <div key={index}>
+            <div className="newsFeed">
+            <h1>{eachArticle.title}</h1>
+          </div>
+          <div className="coronaTracker">
+            <h1>Corona Tracker here</h1>
+          </div>
+          <div className="topHeadlines">
+            <h1>Top Headlines here</h1>
+            </div>
+            </div>
+          )
+      })
+  }
+
   render() {
+      console.log(this.props.newsEvents)
     return (
-      <div>
-        <div className="newsFeed">
-          <h1>News Feed here</h1>
+        <div>
+    {this.props.ready ? this.showArticles() : " "}
         </div>
-        <div className="coronaTracker">
-          <h1>Corona Tracker here</h1>
-        </div>
-        <div className="topHeadlines">
-          <h1>Top Headlines here</h1>
-        </div>
-
-        {/* <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            onChange={e => this.handleChange(e)}
-          />
-          <label>Description:</label>
-          <textarea
-            name="description"
-            value={this.state.description}
-            onChange={e => this.handleChange(e)}
-          />
-
-          <input type="submit" value="Submit" />
-        </form> */}
-      </div>
     );
   }
 }

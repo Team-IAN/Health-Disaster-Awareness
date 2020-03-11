@@ -18,7 +18,8 @@ var headers = {
 class App extends Component {
   
   state = {
-    newsEvents: []
+    newsEvents: [],
+    ready: false
    }
   
   async componentDidMount() {
@@ -26,10 +27,11 @@ class App extends Component {
     this.setState({...user.data})
     console.log('coolest')
     let newsEvents = await axios.get(url, headers)   
-  console.log(newsEvents.data)
+    console.log(newsEvents.data)
 
   this.setState({
     newsEvents:newsEvents.data,
+    ready: true
 })
   }
 
@@ -66,7 +68,7 @@ class App extends Component {
         <Route exact path="/sign-up" render={(props)=><SignUp {...props} setUser={this.setUser} />} />
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
-        <Route exact path="/home" render={(props) => <Main {...props} newsEvent={this.newEvents}/>}/>
+        <Route exact path="/home" render={(props) => <Main {...props} newsEvents={this.state.newsEvents} ready={this.state.ready}/>}/>
       </Switch>
     </BrowserRouter>
   );
