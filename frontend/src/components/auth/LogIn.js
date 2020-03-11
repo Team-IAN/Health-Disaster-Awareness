@@ -11,10 +11,12 @@ class LogIn extends Component {
     handleSubmit = e => {
         e.preventDefault()
          actions.logIn(this.state).then(user => {
-            this.props.setUser({...user.data})  
+            this.props.setUser({...user.data})
+            this.props.history.push("/home");
         }).catch(({ response }) => console.error(response.data));
     }
     render() {
+        console.log(this.props)
         return (
             <Fragment>
                 <h2>LogIn</h2>

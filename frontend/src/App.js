@@ -7,6 +7,7 @@ import LogIn from './components/auth/LogIn';
 import Profile from './components/profile/Profile'
 import actions from './services/index'
 import axios from 'axios'
+import Main from './components/main/Main'
 
 var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`
 
@@ -65,8 +66,7 @@ class App extends Component {
         <Route exact path="/sign-up" render={(props)=><SignUp {...props} setUser={this.setUser} />} />
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
-        
-        <Route component={NotFound} />
+        <Route exact path="/home" render={(props) => <Main {...props} newsEvent={this.newEvents}/>}/>
       </Switch>
     </BrowserRouter>
   );
