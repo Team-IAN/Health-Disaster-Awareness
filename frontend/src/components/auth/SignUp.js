@@ -21,8 +21,19 @@ class SignUp extends Component {
             <Fragment>
                 <h2>SignUP</h2>
                 <form onSubmit={this.handleSubmit}>
+                    <div>
+                    <p>Email</p>
                     <input name="email" type="email" onChange={this.handleChange} />
+                    </div>
+                    <div>
+                    <p>Password</p>
                     <input name="password" type="password" onChange={this.handleChange} />
+                    </div>
+                    <div>
+                    <p>Username</p>
+                    <input name="userName" type="userName" onChange={this.handleChange}/>
+                    </div>
+                    <br></br>
                     <input type="submit" value="Sign Up"/>
                 </form>
             </Fragment>
