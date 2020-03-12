@@ -47,7 +47,6 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <PostArticle />
         {this.state.email}
         <nav>
           {/* <NavLink to="/upload-image">Upload Image</NavLink> */}

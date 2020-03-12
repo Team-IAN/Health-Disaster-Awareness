@@ -17,12 +17,12 @@ class PostArticle extends Component {
   render() {
     return (
       <Fragment>
-        <h2>Post</h2>
+        <h2>Share this article</h2>
         <form onSubmit={this.handleSubmit}>
-          <input name="title" type="text" onChange={this.handleChange} />
-          {/* <input name="password" type="password" onChange={this.handleChange} />
+          {/* <input name="title" type="text" onChange={this.handleChange} />
+          <input name="password" type="password" onChange={this.handleChange} />
           <input name="location" type="location" onChange={this.handleChange} /> */}
-          <input type="submit" value="add favourite" />
+          <input type="submit" value="share" />
         </form>
       </Fragment>
     );
