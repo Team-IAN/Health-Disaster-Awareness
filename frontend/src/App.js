@@ -8,7 +8,8 @@ import Profile from "./components/profile/Profile";
 import actions from "./services/index";
 import axios from "axios";
 import Main from "./components/main/Main";
-import PostArticle from "./components/Post_Article/PostArticle";
+import ArticleDetails from "./components/article/ArticleDetails";
+import User_Feed from "./components/user_feed/User_Feed";
 
 var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`;
 
@@ -45,17 +46,18 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <PostArticle />
         {this.state.email}
         <nav>
-          <NavLink to="/">Home |</NavLink>
+          {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
 
           {this.state.email ? (
             <Fragment>
+              <NavLink to="/home">Home |</NavLink>
               <NavLink onClick={this.logOut} to="/">
                 Log Out |
               </NavLink>
               <NavLink to="/profile">Profile|</NavLink>
+              <NavLink to="/User_Feed">User Feed |</NavLink>
             </Fragment>
           ) : (
             <Fragment>
@@ -87,6 +89,40 @@ class App extends Component {
             render={props => (
               <Main
                 {...props}
+                newsEvents={this.state.newsEvents}
+                ready={this.state.ready}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/article-details/:detail"
+            render={props => (
+              <ArticleDetails
+                {...props}
+                newsEvents={this.state.newsEvents}
+                ready={this.state.ready}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/upload-image"
+            render={props => (
+              <imageUpload
+                {...props}
+                newsEvents={this.state.newsEvents}
+                ready={this.state.ready}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/User_Feed"
+            render={props => (
+              <User_Feed
+                {...props}
+                user={this.state}
                 newsEvents={this.state.newsEvents}
                 ready={this.state.ready}
               />

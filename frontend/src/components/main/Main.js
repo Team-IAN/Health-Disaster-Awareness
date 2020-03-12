@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import ArticleDetails from "../article/ArticleDetails";
 // import axios from "axios";
 
 class Main extends Component {
@@ -30,14 +32,10 @@ class Main extends Component {
           return (
               <div key={index}>
             <div className="newsFeed">
-            <h1>{eachArticle.title}</h1>
+            <img src={eachArticle.urlToImage} alt=''/>
+            <Link onClick='' key={eachArticle.title} to={`/article-details/${eachArticle.title}`}><h1>{eachArticle.title}</h1></Link>
           </div>
-          <div className="coronaTracker">
-            <h1>Corona Tracker here</h1>
-          </div>
-          <div className="topHeadlines">
-            <h1>Top Headlines here</h1>
-            </div>
+
             </div>
           )
       })
@@ -47,6 +45,12 @@ class Main extends Component {
       console.log(this.props.newsEvents)
     return (
         <div>
+                  <div className="coronaTracker">
+            <h1>Corona Tracker here</h1>
+          </div>
+          <div className="topHeadlines">
+            <h1>Top Headlines here</h1>
+            </div>
     {this.props.ready ? this.showArticles() : " "}
         </div>
     );
