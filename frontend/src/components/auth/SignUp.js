@@ -5,7 +5,7 @@ class SignUp extends Component {
 
     
     state = {
-        
+
     } 
     handleChange = e => this.setState({[e.target.name]: e.target.value})
 
@@ -25,7 +25,6 @@ class SignUp extends Component {
                     <input name="password" type="password" onChange={this.handleChange} />
                     <input type="submit" value="Sign Up"/>
                 </form>
-                
             </Fragment>
         );
     }
