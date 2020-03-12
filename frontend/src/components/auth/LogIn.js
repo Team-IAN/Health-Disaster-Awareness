@@ -21,10 +21,28 @@ class LogIn extends Component {
       <Fragment>
         <h2>LogIn</h2>
         <form onSubmit={this.handleSubmit}>
-          <input name="email" type="email" onChange={this.handleChange} />
-          <input name="password" type="password" onChange={this.handleChange} />
-          <input name="location" type="location" onChange={this.handleChange} />
-          <input type="submit" value="Log In" />
+          <div>
+            <p>Email</p>
+            <input name="email" type="email" onChange={this.handleChange} />
+          </div>
+          <div>
+            <p>Password</p>
+            <input
+              name="password"
+              type="password"
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <p>Location</p>
+            <input
+              name="location"
+              type="location"
+              onChange={this.handleChange}
+            />
+          </div>
+          <br></br>
+          <input type="submit" value="Sign Up" />
         </form>
       </Fragment>
     );

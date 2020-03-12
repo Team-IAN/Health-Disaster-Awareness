@@ -8,6 +8,7 @@ import Profile from "./components/profile/Profile";
 import actions from "./services/index";
 import axios from "axios";
 import Main from "./components/main/Main";
+import PostArticle from "./components/Post_Article/PostArticle";
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
 
@@ -46,6 +47,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <PostArticle />
         {this.state.email}
         <nav>
           {/* <NavLink to="/upload-image">Upload Image</NavLink> */}

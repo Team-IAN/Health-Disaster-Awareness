@@ -19,10 +19,13 @@ const actions = {
     return await service.post("/login", user);
   },
   logOut: async () => {
-    return await service.get('/logout')
+    return await service.get("/logout");
   },
   shareArticle: async () => {
-    return await service.post('/user-feed')
+    return await service.post("/user-feed");
+  },
+  postArticle: async article => {
+    return await service.post("/postArticle", article);
   }
 
   // handleUpload (theFile) { //the one that saves to cloudinary
@@ -31,7 +34,7 @@ const actions = {
   //     .then(res => res.data)
   //     .catch(errorHandler);
   // },
-  
+
   // saveNewThing (newThing) { // The one that saves to your database
   //   console.log('new thing is: ', newThing)
   //   return service.post('/things/create', newThing)
