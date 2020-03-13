@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import PostArticle from "../Post_Article/PostArticle";
 import actions from "../../services/index"
 
@@ -11,7 +11,7 @@ class ArticleDetails extends Component {
       this.props.newsEvents
     );
     let theArticle = this.props.newsEvents.articles.find(eachArticle => {
-      return eachArticle.title === this.props.match.params.detail;
+      return eachArticle.title.includes (this.props.match.params.detail);
     });
     console.log(theArticle);
 
@@ -42,10 +42,13 @@ class ArticleDetails extends Component {
 
   showArticles = () => {
     let theArticle = this.findDetails();
+    console.log(theArticle)
     return (
       <div>
-        <div className="author&publish">
+        {theArticle && <Fragment>
+        <div className="publish">
           <p>{theArticle.author}</p>
+
           <p>{theArticle.publishedAt}</p>
         </div>
         <div className="newsFeed">
@@ -60,6 +63,7 @@ class ArticleDetails extends Component {
             <h1>Read more</h1>
           </a>
         </div>
+        </Fragment>}
         <div>
           {/* <button onClick="">Like</button>
           <button onClick="">Share</button> */}

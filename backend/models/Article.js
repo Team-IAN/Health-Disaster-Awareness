@@ -6,6 +6,7 @@ const articleSchema = new Schema(
     email: String,
     author: String,
     description: String,
+    // comment: String,
     url: String,
     userName: String,
     urlToImage: String
