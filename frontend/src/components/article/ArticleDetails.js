@@ -29,6 +29,17 @@ class ArticleDetails extends Component {
       .catch(({ response }) => console.error(response));
   };
 
+  handleSubmitLike = e => {
+    e.preventDefault();
+    let theArticle = this.findDetails();
+    actions
+      .likeArticle(theArticle) // {title: userInput}
+      .then(resback => {
+        console.log(resback);
+      })
+      .catch(({ response }) => console.error(response));
+  }
+
   showArticles = () => {
     let theArticle = this.findDetails();
     return (
@@ -61,7 +72,7 @@ class ArticleDetails extends Component {
     return (
       <div>
         {this.props.ready ? this.showArticles() : " "}
-        <PostArticle handleSubmit={this.handleSubmit}/>
+        <PostArticle handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike}/>
       </div>
     );
   }

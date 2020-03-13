@@ -1,11 +1,12 @@
 const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
 const PLM = require('passport-local-mongoose');
 
 const userSchema = new Schema(
   {
     email: String,
     userName: String,
-    favorites: [String],
+    favorites: [{type: mongoose.Schema.Types.ObjectId, ref: "Article"}],
     location: String
   },
   {

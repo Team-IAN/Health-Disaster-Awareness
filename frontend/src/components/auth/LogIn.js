@@ -10,6 +10,7 @@ class LogIn extends Component {
     actions
       .logIn(this.state)
       .then(user => {
+        console.log(user)
         this.props.setUser({ ...user.data });
         this.props.history.push("/home");
       })

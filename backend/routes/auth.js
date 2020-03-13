@@ -16,15 +16,14 @@ router.post('/signup', (req, res, next) => {
     });
 });
 
-
 //return await service.get('/is-logged-in');
 router.get('/is-logged-in', (req, res, next) => {  
   res.json(req.user)
 })
 
-
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
   const { user } = req;
+  console.log(user);
   res.status(200).json(user);
 });
 

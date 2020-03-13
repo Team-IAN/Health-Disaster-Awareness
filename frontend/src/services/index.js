@@ -26,6 +26,9 @@ const actions = {
   },
   postArticle: async article => {
     return await service.post("/postArticle", article);
+  },
+  likeArticle: async article => {
+    return await service.post("/likeArticle", article)
   }
 
   // handleUpload (theFile) { //the one that saves to cloudinary
