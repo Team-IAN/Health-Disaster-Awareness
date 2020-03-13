@@ -5,7 +5,7 @@ const shareSchema = new Schema(
   {
     articleId: String,
     text: String,
-    username: String,
+    userName: String,
     userId: String,
     postId: String
   },

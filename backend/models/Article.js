@@ -7,8 +7,8 @@ const articleSchema = new Schema(
     author: String,
     description: String,
     url: String,
-
-
+    userName: String,
+    urlToImage: String
   },
   {
     timestamps: true,

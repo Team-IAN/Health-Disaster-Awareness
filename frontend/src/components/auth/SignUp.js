@@ -15,6 +15,7 @@ class SignUp extends Component {
       .then(user => {
         console.log(user);
         this.props.setUser({ ...user.data });
+        this.props.history.push("/home");
       })
       .catch(({ response }) => console.error(response.data));
   };
@@ -23,9 +24,13 @@ class SignUp extends Component {
       <Fragment>
         <h2>SignUP</h2>
         <form onSubmit={this.handleSubmit}>
+        <div>
+            <p>Username</p>
+            <input name="userName" type="text" onChange={this.handleChange} />
+          </div>
           <div>
             <p>Email</p>
-            <input name="email" type="email" onChange={this.handleChange} />
+            <input name="email" type="text" onChange={this.handleChange} />
           </div>
           <div>
             <p>Password</p>
@@ -35,14 +40,14 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          {/* <div>
             <p>Location</p>
             <input
               name="location"
-              type="location"
+              type="text"
               onChange={this.handleChange}
             />
-          </div>
+          </div> */}
           <br></br>
           <input type="submit" value="Sign Up" />
         </form>

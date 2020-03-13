@@ -33,16 +33,16 @@ class LogIn extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          {/* <div>
             <p>Location</p>
             <input
               name="location"
               type="location"
               onChange={this.handleChange}
             />
-          </div>
+          </div> */}
           <br></br>
-          <input type="submit" value="Sign Up" />
+          <input type="submit" value="Login" />
         </form>
       </Fragment>
     );
