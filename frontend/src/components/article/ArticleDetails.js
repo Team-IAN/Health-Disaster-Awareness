@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PostArticle from "../Post_Article/PostArticle";
+import actions from "../../services/index"
 
 class ArticleDetails extends Component {
+
   findDetails = () => {
     console.log(
       "article detail title:",
@@ -14,6 +16,17 @@ class ArticleDetails extends Component {
     console.log(theArticle);
 
     return theArticle;
+  };
+
+    handleSubmit = e => {
+    e.preventDefault();
+    let theArticle = this.findDetails();
+    actions
+      .postArticle(theArticle) // {title: userInput}
+      .then(resback => {
+        console.log(resback);
+      })
+      .catch(({ response }) => console.error(response));
   };
 
   showArticles = () => {
@@ -37,8 +50,8 @@ class ArticleDetails extends Component {
           </a>
         </div>
         <div>
-          <button onClick="">Like</button>
-          <button onClick="">Share</button>
+          {/* <button onClick="">Like</button>
+          <button onClick="">Share</button> */}
         </div>
       </div>
     );
@@ -48,7 +61,7 @@ class ArticleDetails extends Component {
     return (
       <div>
         {this.props.ready ? this.showArticles() : " "}
-        <PostArticle />
+        <PostArticle handleSubmit={this.handleSubmit}/>
       </div>
     );
   }

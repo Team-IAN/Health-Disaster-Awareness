@@ -18,7 +18,7 @@ class PostArticle extends Component {
     return (
       <Fragment>
         <h2>Share this article</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.handleSubmit}>
           {/* <input name="title" type="text" onChange={this.handleChange} />
           <input name="password" type="password" onChange={this.handleChange} />
           <input name="location" type="location" onChange={this.handleChange} /> */}

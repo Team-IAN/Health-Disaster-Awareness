@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 const Article = require("../models/Article");
 
-router.post("/postArticle", (req, res) => {
-  console.log(req.body);
-  Article.create(req.body)
+router.post("/postArticle",isAuth, (req, res) => {
+  console.log(req.body, req.user);
+  let article = req.body
+  article.email = req.user.email
+  Article.create(article)
     .then(datares => res.json(datares))
     .catch(err => console.log(err));
 
@@ -12,5 +14,9 @@ router.post("/postArticle", (req, res) => {
   //   .then(res => console.log(res))
   //   .catch(err => console.log(err));
 });
+
+function isAuth(req, res, next) {
+  req.isAuthenticated() ? next() : res.status(401).json({ msg: 'Log in first' });
+}
 
 module.exports = router;

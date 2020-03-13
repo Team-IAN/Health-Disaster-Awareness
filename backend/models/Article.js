@@ -2,7 +2,13 @@ const { Schema, model } = require("mongoose");
 
 const articleSchema = new Schema(
   {
-    title: String
+    title: String,
+    email: String,
+    author: String,
+    description: String,
+    url: String,
+
+
   },
   {
     timestamps: true,
