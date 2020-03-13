@@ -27,7 +27,7 @@ router.post("/likeArticle", isAuth, (req, res) => {
       User.findByIdAndUpdate(
         req.user._id,
         {
-          $push: { favorites: foundArticle._id }
+          $addToSet: { favorites: foundArticle._id }
         },
         { new: true }
       ).then(user => {
@@ -37,7 +37,7 @@ router.post("/likeArticle", isAuth, (req, res) => {
       Article.create(article)
         .then(createArticle => {
           User.findByIdAndUpdate(req.user._id, {
-            $push: { favorites: createArticle._id }
+            $addToSet: { favorites: createArticle._id }
           }).then(user => {
             res.status(200).json(user);
           });
@@ -45,6 +45,14 @@ router.post("/likeArticle", isAuth, (req, res) => {
         .catch(err => console.log(err));
   });
 });
+
+router.get("/findLikedArticles", isAuth, (req, res, next) => {
+  let likedArticles = req.user.favorites
+  console.log(likedArticles)
+  Article.find({userName: req.user.userName})
+  .then(datares => res.json(datares))
+  .catch(err => console.log(err));
+})
 
 function isAuth(req, res, next) {
   req.isAuthenticated()
