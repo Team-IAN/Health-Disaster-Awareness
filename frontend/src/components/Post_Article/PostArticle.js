@@ -8,7 +8,7 @@ class PostArticle extends Component {
   handleSubmit = e => {
     e.preventDefault();
     actions
-      .postArticle(this.state) // {title: userInput}
+      .likeArticle(this.state) // {title: userInput}
       .then(resback => {
         console.log(resback);
       })

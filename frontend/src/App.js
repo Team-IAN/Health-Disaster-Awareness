@@ -5,6 +5,7 @@ import NotFound from "./components/404/NotFound.js";
 import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
 import Profile from "./components/profile/Profile";
+import Coronavirus from "./components/coronavirus/Coronavirus";
 import actions from "./services/index";
 import axios from "axios";
 import Main from "./components/main/Main";
@@ -58,11 +59,12 @@ class App extends Component {
               </NavLink>
               <NavLink to="/profile">Profile|</NavLink>
               <NavLink to="/User_Feed">User Feed |</NavLink>
+              <NavLink to="/Coronavirus">Corona Tracker</NavLink>
             </Fragment>
           ) : (
             <Fragment>
               <NavLink to="/sign-up">Sign Up |</NavLink>
-              <NavLink to="/log-in">Log In |</NavLink>
+              <NavLink to="/log-in">Log In</NavLink>
             </Fragment>
           )}
         </nav>
@@ -82,6 +84,11 @@ class App extends Component {
             exact
             path="/profile"
             render={props => <Profile {...props} user={this.state} />}
+          />
+          <Route
+            exact
+            path="/Coronavirus"
+            render={props => <Coronavirus {...props} user={this.state} />}
           />
           <Route
             exact
