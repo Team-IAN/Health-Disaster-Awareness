@@ -13,7 +13,7 @@ import PostArticle from "./components/Post_Article/PostArticle";
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
 
-var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`;
+var url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`;
 
 var headers = {
   "X-Api-Key": "3d317330f7724477a808676552aeec15"
