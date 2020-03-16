@@ -23,6 +23,7 @@ class ArticleDetails extends Component {
     actions
       .likeArticle(theArticle) // {title: userInput}
       .then(resback => {
+        this.props.setUser(resback.data)
         console.log(resback);
       })
       .catch(({ response }) => console.error(response));

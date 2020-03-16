@@ -13,10 +13,9 @@ class User_Feed extends Component {
     }
     showLikedArticles = () => {
         return this.state.articles.map(eachArticle => {
-            return <li><a href={eachArticle.url} target="_blank">{eachArticle.title}</a>
-         <p>Liked by: {eachArticle.userName}</p>
-            </li>
-
+            return <p><a href={eachArticle.url} target="_blank"> <img src={eachArticle.urlToImage} /><br />{eachArticle.title}</a>
+                <p>Liked by {eachArticle.users.length} users.</p>
+</p>
         })
     }
     render() {

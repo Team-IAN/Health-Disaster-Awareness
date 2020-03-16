@@ -23,7 +23,7 @@ router.post("/likeArticle", isAuth, (req, res) => {
   article.users = [req.user._id]
   //article.email = req.user.email
   // article.userName = req.user.userName;
-  console.log("hi")
+  let articleID;
   Article.findOne({ url: article.url }).then(foundArticle => {
     if (foundArticle !== null) {
       console.log(foundArticle)
@@ -33,14 +33,22 @@ router.post("/likeArticle", isAuth, (req, res) => {
           $addToSet: { users: req.user._id }
         },
         { new: true }
-      ).then(user => {
-        console.log(user)
-        res.status(200).json(user);
+      ).then(articleUpdated => {
+        console.log(articleUpdated)
+        User.findByIdAndUpdate(req.body._id, {
+           $addToSet: { favorites: articleUpdated._id }
+        }).then(user => {
+          res.status(200).json(user);
+        })
       });
     } else
       Article.create(article)
-        .then(createArticle => {
-            res.status(200).json(createArticle);
+        .then(articleCreated => {
+          User.findByIdAndUpdate(req.body._id, {
+            $addToSet: { favorites: articleCreated._id }
+         }).then(user => {
+           res.status(200).json(user);
+         })
         })
         .catch(err => console.log(err));
   });
