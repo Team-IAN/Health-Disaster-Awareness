@@ -10,7 +10,6 @@ class User_Feed extends Component {
             console.log(articles)
             this.setState({ articles: articles.data.allArticles })
         })
-
     }
     showLikedArticles = () => {
         return this.state.articles.map(eachArticle => {
@@ -20,7 +19,6 @@ class User_Feed extends Component {
 
         })
     }
-
     render() {
         return (
             <div>

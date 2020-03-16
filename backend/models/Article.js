@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const mongoose = require('mongoose');
 
 const articleSchema = new Schema(
   {
@@ -9,7 +10,8 @@ const articleSchema = new Schema(
     // comment: String,
     url: String,
     userName: String,
-    urlToImage: String
+    urlToImage: String,
+    users: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}]
   },
   {
     timestamps: true,

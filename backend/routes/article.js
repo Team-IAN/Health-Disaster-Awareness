@@ -20,27 +20,27 @@ router.post("/postArticle", isAuth, (req, res) => {
 router.post("/likeArticle", isAuth, (req, res) => {
   console.log(req.body, req.user);
   let article = req.body;
+  article.users = [req.user._id]
   //article.email = req.user.email
   // article.userName = req.user.userName;
+  console.log("hi")
   Article.findOne({ url: article.url }).then(foundArticle => {
     if (foundArticle !== null) {
-      User.findByIdAndUpdate(
-        req.user._id,
+      console.log(foundArticle)
+      Article.findOneAndUpdate(
+        { url: article.url },
         {
-          $addToSet: { favorites: foundArticle._id }
+          $addToSet: { users: req.user._id }
         },
         { new: true }
       ).then(user => {
+        console.log(user)
         res.status(200).json(user);
       });
     } else
       Article.create(article)
         .then(createArticle => {
-          User.findByIdAndUpdate(req.user._id, {
-            $addToSet: { favorites: createArticle._id }
-          }).then(user => {
-            res.status(200).json(user);
-          });
+            res.status(200).json(createArticle);
         })
         .catch(err => console.log(err));
   });

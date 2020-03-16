@@ -14,7 +14,6 @@ class ArticleDetails extends Component {
       return eachArticle.title.includes (this.props.match.params.detail);
     });
     console.log(theArticle);
-
     return theArticle;
   };
 
@@ -22,7 +21,7 @@ class ArticleDetails extends Component {
     e.preventDefault();
     let theArticle = this.findDetails();
     actions
-      .postArticle(theArticle) // {title: userInput}
+      .likeArticle(theArticle) // {title: userInput}
       .then(resback => {
         console.log(resback);
       })
