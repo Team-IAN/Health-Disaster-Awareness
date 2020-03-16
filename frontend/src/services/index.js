@@ -32,6 +32,9 @@ const actions = {
   },
   findLikedArticles: async () => {
     return await service.get("/findLikedArticles")
+  },
+  findAllArticles: async () => {
+    return await service.get("/getAllArticles")
   }
 
 

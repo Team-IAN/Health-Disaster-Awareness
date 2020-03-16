@@ -17,14 +17,13 @@ class PostArticle extends Component {
   render() {
     return (
       <Fragment>
-        <form onSubmit={this.props.handleSubmitLike}>
-          <input type="submit" value="Like" />
-        </form>
-        <h2>Share this article</h2>
-        <form onSubmit={this.props.handleSubmit}>
-
-          {/* <input name="comment" placeholder="Comment" type="text" onChange={this.handleChange} /> */}
+        {/* <form onSubmit={this.props.handleSubmitLike}>
           <input type="submit" value="Share" />
+        </form>
+        <h2>Share this article</h2> */}
+        <form onSubmit={this.props.handleSubmit}>
+          {/* <input name="comment" placeholder="Comment" type="text" onChange={this.handleChange} /> */}
+          <input type="submit" value="Like" />
         </form>
       </Fragment>
     );

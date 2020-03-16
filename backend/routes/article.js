@@ -54,6 +54,12 @@ router.get("/findLikedArticles", isAuth, (req, res, next) => {
   .catch(err => console.log(err));
 })
 
+router.get('/getAllArticles', (req, res, next) => {
+  Article.find()
+  .then(allArticles => res.json({allArticles}))
+  .catch(err => console.log(err));
+})
+
 function isAuth(req, res, next) {
   req.isAuthenticated()
     ? next()
