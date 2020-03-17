@@ -55,7 +55,7 @@ class Navbar2 extends Component {
               <Nav.Link href="/log-in">Login</Nav.Link>
             </Nav>
           </Navbar>
-        };
+        }
       </Router>
     );
   }

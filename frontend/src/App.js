@@ -13,7 +13,7 @@ import PostArticle from "./components/Post_Article/PostArticle";
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
 import Navbar from "./components/navbar/Navbar"
-import Navbar2 from "./components/navbar/Navbar2";
+import Navbar2 from "./components/navbar/Navbar2"
 
 
 let apiKey = "3d317330f7724477a808676552aeec15"
