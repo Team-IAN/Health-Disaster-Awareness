@@ -55,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        {this.state.userName}
+        {/* {this.state.userName} */}
         {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
         {/* <Navbar email={this.state.email} /> */}
         <Navbar2 email={this.state.email} />
