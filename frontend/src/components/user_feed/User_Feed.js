@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import actions from "../../services/index";
+import PostArticle from "../Post_Article/PostArticle";
+import ArticleDetails from "../article/ArticleDetails";
 
 class User_Feed extends Component {
     state = {
@@ -13,15 +15,19 @@ class User_Feed extends Component {
     }
     showLikedArticles = () => {
         return this.state.articles.map(eachArticle => {
-            return <p><a href={eachArticle.url} target="_blank"> <img src={eachArticle.urlToImage} /><br />{eachArticle.title}</a>
+            return <Fragment>
+                <p><a href={eachArticle.url} target="_blank"> <img src={eachArticle.urlToImage} /><br />{eachArticle.title}</a>
                 <p>Liked by {eachArticle.users.length} user(s).</p>
-</p>
+            </p>
+            <form onSubmit={this.props.handleSubmit}>
+            <input type="submit" value="Like" />
+          </form>
+          </Fragment>
         })
     }
     render() {
         return (
             <div>
-                <iframe src="https://www.bing.com/covid" width="1500" height="1000"></iframe>
                 <div className="favoriteFeed"><h1>Recently Liked Articles</h1></div>
                 {this.showLikedArticles()}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PostArticle from "../Post_Article/PostArticle";
 import actions from "../../services/index"
+import User_Feed from "../user_feed/User_Feed"
 
 class ArticleDetails extends Component {
 
@@ -77,6 +78,7 @@ class ArticleDetails extends Component {
       <div>
         {this.props.ready ? this.showArticles() : " "}
         <PostArticle handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike}/>
+        <User_Feed handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike} />
       </div>
     );
   }

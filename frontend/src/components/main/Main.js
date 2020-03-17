@@ -54,7 +54,7 @@ class Main extends Component {
             <h1>Corona Tracker here</h1>
           </div> */}
           <div className="topHeadlines">
-            <h1>Top Headlines here</h1>
+            <h1>Top Headlines</h1>
             </div>
     {this.props.ready ? this.showArticles() : " "}
         </div>
