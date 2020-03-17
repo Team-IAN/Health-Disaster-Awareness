@@ -11,7 +11,7 @@ class ArticleDetails extends Component {
       this.props.newsEvents
     );
     let theArticle = this.props.newsEvents.articles.find(eachArticle => {
-      return eachArticle.title.includes (this.props.match.params.detail);
+      return eachArticle.publishedAt.includes(this.props.match.params.detail);
     });
     console.log(theArticle);
     return theArticle;

@@ -62,9 +62,10 @@ router.get("/findLikedArticles", isAuth, (req, res, next) => {
   .catch(err => console.log(err));
 })
 
-router.get('/getAllArticles', (req, res, next) => {
+router.get('/getAllArticles', (req, res, next) => {//route to the articles collection
   Article.find()
-  .then(allArticles => res.json({allArticles}))
+  .sort({"updatedAt": -1})
+  .then(allArticles => res.json({allArticles: allArticles}))
   .catch(err => console.log(err));
 })
 

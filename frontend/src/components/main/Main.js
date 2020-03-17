@@ -27,13 +27,18 @@ class Main extends Component {
   //     this.setState({ [name]: value });
   //   };
 
+  decode = (uri) => {
+    this.props.history.push(decodeURIComponent(uri))
+    
+  }
   showArticles = () => {
       return this.props.newsEvents.articles.map((eachArticle, index) => {
+
           return (
               <div key={index}>
             <div className="newsFeed">
             <img src={eachArticle.urlToImage} alt=''/>
-            <Link onClick='' key={eachArticle.title} to={`/article-details/${eachArticle.title}`}><h1>{eachArticle.title}</h1></Link>
+            <Link onClick='' key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}><h1>{eachArticle.title}</h1></Link>
           </div>
 
             </div>
@@ -42,7 +47,7 @@ class Main extends Component {
   }
 
   render() {
-      console.log(this.props.newsEvents)
+    // console.log(this.props.newsEvents)
     return (
         <div>
                   <div className="coronaTracker">
