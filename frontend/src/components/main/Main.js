@@ -38,7 +38,7 @@ class Main extends Component {
               <div key={index}>
             <div className="newsFeed">
             <img src={eachArticle.urlToImage} alt=''/>
-            <Link onClick='' key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}><h1>{eachArticle.title}</h1></Link>
+            <Link key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}><h1>{eachArticle.title}</h1></Link>
           </div>
 
             </div>

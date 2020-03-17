@@ -8,7 +8,7 @@ class Navbar2 extends Component {
   state = {
     isOpen: false
   };
-
+  
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
@@ -43,7 +43,7 @@ class Navbar2 extends Component {
             </Nav>
             <Nav>
               <Nav.Link href="/profile">Profile</Nav.Link>
-              <Nav.Link onClick={this.logout} href="/">Logout</Nav.Link>
+              <Nav.Link onClick={this.logOut} href="/">Logout</Nav.Link>
             </Nav>
           </Navbar> :
           <Navbar sticky="top" bg="primary" variant="dark">

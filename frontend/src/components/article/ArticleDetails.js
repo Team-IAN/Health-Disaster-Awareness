@@ -78,7 +78,7 @@ class ArticleDetails extends Component {
       <div>
         {this.props.ready ? this.showArticles() : " "}
         <PostArticle handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike}/>
-        <User_Feed handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike} />
+        {/* <User_Feed handleSubmit={this.handleSubmit} handleSubmitLike={this.handleSubmitLike} /> */}
       </div>
     );
   }
