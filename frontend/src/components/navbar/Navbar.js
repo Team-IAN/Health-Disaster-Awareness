@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
@@ -74,32 +73,6 @@ render() {
         </MDBCollapse>
       </MDBNavbar>
     </Router>
-=======
-import React, { Component, Fragment } from "react";
-import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
-
-class Navbar extends Component {
-  render() {
-    return (
-      <nav>
-        {this.props.email ? (
-          <Fragment>
-            <NavLink to="/home">Home |</NavLink>
-            <NavLink onClick={this.logOut} to="/">
-              Log Out |
-            </NavLink>
-            <NavLink to="/profile">Profile|</NavLink>
-            <NavLink to="/User_Feed">User Feed |</NavLink>
-            <NavLink to="/Coronavirus">Corona Tracker</NavLink>
-          </Fragment>
-        ) : (
-          <Fragment>
-            <NavLink to="/sign-up">Sign Up |</NavLink>
-            <NavLink to="/log-in">Log In</NavLink>
-          </Fragment>
-        )}
-      </nav>
->>>>>>> 574344e3a0351ebc3c1beb0d6961073f167c6cf9
     );
   }
 }
