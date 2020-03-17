@@ -50,9 +50,9 @@ class Main extends Component {
     // console.log(this.props.newsEvents)
     return (
         <div>
-                  <div className="coronaTracker">
+                  {/* <div className="coronaTracker">
             <h1>Corona Tracker here</h1>
-          </div>
+          </div> */}
           <div className="topHeadlines">
             <h1>Top Headlines here</h1>
             </div>

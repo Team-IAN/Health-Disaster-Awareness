@@ -32,7 +32,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://goofy-brown-9d5a34.netlify.com"] //Swap this with the client url
+    origin: ["http://localhost:3000", "https://covid-19-tracker.netlify.com"] //Swap this with the client url
   })
 );
 
