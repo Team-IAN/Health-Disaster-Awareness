@@ -18,7 +18,7 @@ import Navbar2 from "./components/navbar/Navbar2";
 
 let apiKey = "3d317330f7724477a808676552aeec15"
 
-var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`;
+var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`
 
 // var headers = {
 //   "X-Api-Key": 
