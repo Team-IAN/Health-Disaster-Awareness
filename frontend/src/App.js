@@ -12,14 +12,18 @@ import Main from "./components/main/Main";
 import PostArticle from "./components/Post_Article/PostArticle";
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar"
 import Navbar2 from "./components/navbar/Navbar2";
 
-var url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`;
 
-var headers = {
-  "X-Api-Key": "3d317330f7724477a808676552aeec15"
-};
+let apiKey = "3d317330f7724477a808676552aeec15"
+
+var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`;
+
+// var headers = {
+//   "X-Api-Key": 
+// };
+
 
 class App extends Component {
   state = {
@@ -30,7 +34,7 @@ class App extends Component {
   async componentDidMount() {
     let user = await actions.isLoggedIn();
     this.setState({ ...user.data });
-    let newsEvents = await axios.get(url, headers);
+    let newsEvents = await axios.get(url);
     console.log(newsEvents.data);
 
     this.setState({
@@ -59,7 +63,6 @@ class App extends Component {
         {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
         {/* <Navbar email={this.state.email} /> */}
         <Navbar2 email={this.state.email} />
-
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
           <Route
