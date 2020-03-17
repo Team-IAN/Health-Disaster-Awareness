@@ -12,6 +12,8 @@ import Main from "./components/main/Main";
 import PostArticle from "./components/Post_Article/PostArticle";
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
+import Navbar from "./components/navbar/Navbar";
+import Navbar2 from "./components/navbar/Navbar2";
 
 var url = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3d317330f7724477a808676552aeec15`;
 
@@ -41,33 +43,23 @@ class App extends Component {
 
   logOut = async () => {
     let res = await actions.logOut();
-    this.setUser({ email: null, createdAt: null, updatedAt: null, _id: null, userName: null }); //FIX
+    this.setUser({
+      email: null,
+      createdAt: null,
+      updatedAt: null,
+      _id: null,
+      userName: null
+    }); //FIX
   };
 
   render() {
     return (
       <BrowserRouter>
         {this.state.userName}
-        <nav>
-          {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
+        {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
+        {/* <Navbar email={this.state.email} /> */}
+        <Navbar2 email={this.state.email} />
 
-          {this.state.email ? (
-            <Fragment>
-              <NavLink to="/home">Home |</NavLink>
-              <NavLink onClick={this.logOut} to="/">
-                Log Out |
-              </NavLink>
-              <NavLink to="/profile">Profile|</NavLink>
-              <NavLink to="/User_Feed">User Feed |</NavLink>
-              <NavLink to="/Coronavirus">Corona Tracker</NavLink>
-            </Fragment>
-          ) : (
-            <Fragment>
-              <NavLink to="/sign-up">Sign Up |</NavLink>
-              <NavLink to="/log-in">Log In</NavLink>
-            </Fragment>
-          )}
-        </nav>
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
           <Route
