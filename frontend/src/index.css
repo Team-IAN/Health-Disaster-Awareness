@@ -10,3 +10,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.prevention {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.ifSick {
+  text-align: center;
+  font-size: 1.2rem;
+}
