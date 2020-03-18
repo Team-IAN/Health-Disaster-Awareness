@@ -11,6 +11,7 @@ const articleSchema = new Schema(
     url: String,
     userName: String,
     urlToImage: String,
+    content: String,
     users: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}]
   },
   {
