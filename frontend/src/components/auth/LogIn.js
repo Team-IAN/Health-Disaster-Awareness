@@ -58,6 +58,7 @@ class LogIn extends Component {
           {/* <h2>
             <span class="font-weight-bold">Welcome</span>
           </h2> */}
+          <br></br>
           <h4 className="text-center"> Log in to COVID-19 Tracker</h4>
           <Form.Group className="text-center" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

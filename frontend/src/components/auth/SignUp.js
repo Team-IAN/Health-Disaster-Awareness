@@ -1,22 +1,25 @@
 import React, { Component, Fragment, useState } from "react";
-import { Form, Button, FormControl, Dropdown } from 'react-bootstrap';
+import { Form, Button, FormControl, Dropdown } from "react-bootstrap";
 import actions from "../../services/index";
-import { CountryDropdown, CountryRegionData } from 'react-country-region-selector';
+import {
+  CountryDropdown,
+  CountryRegionData
+} from "react-country-region-selector";
 
 class SignUp extends Component {
   state = {
-    country: ''
-  }
+    country: ""
+  };
 
   selectCountry = e => {
     this.setState({ country: e });
-  }
+  };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state)
+    console.log(this.state);
     actions
       .signUp(this.state)
       .then(user => {
@@ -29,11 +32,13 @@ class SignUp extends Component {
   };
 
   render() {
-    const { country } = this.state
+    const { country } = this.state;
     return (
       <Fragment>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="formBasicUsername">
+        <br></br>
+        <h4 className="text-center"> Sign Up</h4>
+        <Form className="sign-up" onSubmit={this.handleSubmit}>
+          <Form.Group className="text-center" controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
             <Form.Control
               name="userName"
@@ -71,13 +76,20 @@ class SignUp extends Component {
             {/* <Form.Control name="location" type="text" onChange={this.handleChange} /> */}
             <br></br>
             <CountryDropdown
+              class="btn-lg btd-dark btn-block"
               value={this.state.country}
               name="location"
               valueType="short"
-              onChange={e => this.selectCountry(e)} 
-              />
+              onChange={e => this.selectCountry(e)}
+            />
           </Form.Group>
-          <Button variant="primary" type="submit" value="Sign Up">
+          <br></br>
+          <Button
+            className="btn-lg btd-dark btn-block"
+            variant="primary"
+            type="submit"
+            value="Sign Up"
+          >
             Sign Up
           </Button>
         </Form>
