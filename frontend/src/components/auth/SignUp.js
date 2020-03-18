@@ -75,7 +75,7 @@ class SignUp extends Component {
             {/* <Form.Control name="location" type="text" onChange={this.handleChange} /> */}
             <br></br>
             <CountryDropdown
-              class="btn-lg btd-dark btn-block"
+              class="btd-dark btn-block"
               value={this.state.country}
               name="location"
               valueType="short"
