@@ -20,7 +20,7 @@ class LogIn extends Component {
         console.log(user);
         this.props.setUser({ ...user.data });
         this.props.history.push("/home");
-        this.props.apiCall(user)
+        this.props.apiCall(user);
       })
       .catch(({ response }) => console.error(response.data));
   };
@@ -54,8 +54,12 @@ class LogIn extends Component {
           <input type="submit" value="Login" />
         </form> */}
 
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="formBasicEmail">
+        <Form className="login-form" onSubmit={this.handleSubmit}>
+          {/* <h2>
+            <span class="font-weight-bold">Welcome</span>
+          </h2> */}
+          <h4 className="text-center"> Log in to COVID-19 Tracker</h4>
+          <Form.Group className="text-center" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               name="email"
@@ -65,21 +69,30 @@ class LogIn extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group className="text-center" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
               name="password"
               type="password"
-              placeholder="Enter Password"
+              placeholder="Enter password"
               onChange={this.handleChange}
             />
           </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
+          <Form.Group className="text-center" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Remember me" />
           </Form.Group>
-          <Button variant="primary" type="submit" value="Login">
+          <Button
+            className="btn-lg btd-dark btn-block"
+            variant="primary"
+            type="submit"
+            value="Login"
+          >
             Log In
           </Button>
+          <br></br>
+          <div className="text-center">
+            <a href="/sign-up">Sign Up for an account</a>
+          </div>
         </Form>
       </Fragment>
     );
