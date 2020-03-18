@@ -32,8 +32,8 @@ class SignUp extends Component {
     const { country } = this.state
     return (
       <Fragment>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="formBasicUsername">
+        <Form className="login-form" onSubmit={this.handleSubmit}>
+          <Form.Group controlId="formBasicUsername" className="text-center">
             <Form.Label>Username</Form.Label>
             <Form.Control
               name="userName"
@@ -65,19 +65,18 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </Form.Group>
-
           <Form.Group className="text-center" controlId="formBasicPassword">
             <Form.Label>Location</Form.Label>
             {/* <Form.Control name="location" type="text" onChange={this.handleChange} /> */}
             <br></br>
-            <CountryDropdown
+            <CountryDropdown className="text-center"
               value={this.state.country}
               name="location"
               valueType="short"
               onChange={e => this.selectCountry(e)} 
               />
           </Form.Group>
-          <Button variant="primary" type="submit" value="Sign Up">
+          <Button className="text-center" variant="primary" type="submit" value="Sign Up">
             Sign Up
           </Button>
         </Form>
