@@ -6,7 +6,7 @@ import actions from "../../services/index";
 
 class Main extends Component {
   // state = {
-    
+
   // }
 
   decode = (uri) => {
@@ -60,13 +60,13 @@ class Main extends Component {
                             <br></br>
                             {eachArticle.content}
                             <br></br>
-                            <form onSubmit={(e) => this.handleSubmit(e, eachArticle)}>
+                            <br></br>
+                            <Button onClick={(e) => this.handleSubmit(e, eachArticle)} variant="primary" type="submit">
                               {/* <input name="comment" placeholder="Comment" type="text" onChange={this.handleChange} /> */}
-                              <input type="submit" value="Like" />
-                            </form>
-                            <a rel="noopener noreferrer" target="_blank" href={eachArticle.url}>
-                              Read more
-                            </a>
+                                Like
+                            </Button>
+                            {' '}
+                            <Button href={eachArticle.url} target="_blank">Read More</Button>
                           </Card.Body>
                         </Accordion.Collapse>
                       </Card>
@@ -77,9 +77,7 @@ class Main extends Component {
               <br></br>
             </div>
           </div>
-
         </container>
-
       )
     })
   }
