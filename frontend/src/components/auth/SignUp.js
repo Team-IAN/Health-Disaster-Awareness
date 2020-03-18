@@ -1,13 +1,22 @@
-import React, { Component, Fragment } from "react";
-import { Form, Button } from 'react-bootstrap';
+import React, { Component, Fragment, useState } from "react";
+import { Form, Button, FormControl, Dropdown } from 'react-bootstrap';
 import actions from "../../services/index";
+import { CountryDropdown, CountryRegionData } from 'react-country-region-selector';
 
 class SignUp extends Component {
-  state = {};
+  state = {
+    country: ''
+  }
+
+  selectCountry = e => {
+    this.setState({ country: e });
+  }
+
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log(this.state)
     actions
       .signUp(this.state)
       .then(user => {
@@ -19,39 +28,10 @@ class SignUp extends Component {
       .catch(({ response }) => console.error(response.data));
   };
 
-
   render() {
+    const { country } = this.state
     return (
       <Fragment>
-        {/* <h2>SignUP</h2>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <p>Username</p>
-            <input name="userName" type="text" onChange={this.handleChange} />
-          </div>
-          <div>
-            <p>Email</p>
-            <input name="email" type="text" onChange={this.handleChange} />
-          </div>
-          <div>
-            <p>Password</p>
-            <input
-              name="password"
-              type="password"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div>
-            <p>Location</p>
-            <input
-              name="location"
-              type="text"
-              onChange={this.handleChange}
-            />
-          </div>
-          <br></br>
-          <input type="submit" value="Sign Up" />
-        </form> */}
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
@@ -73,9 +53,15 @@ class SignUp extends Component {
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Location</Form.Label>
-            <Form.Control name="location" type="text" onChange={this.handleChange} />
+            {/* <Form.Control name="location" type="text" onChange={this.handleChange} /> */}
+            <br></br>
+            <CountryDropdown
+              value={this.state.country}
+              name="location"
+              valueType="short"
+              onChange={e => this.selectCountry(e)} 
+              />
           </Form.Group>
-
           <Button variant="primary" type="submit" value="Sign Up">
             Sign Up
           </Button>

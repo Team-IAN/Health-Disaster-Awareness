@@ -7,7 +7,7 @@ const userSchema = new Schema(
     email: String,
     userName: String,
     favorites: [{type: mongoose.Schema.Types.ObjectId, ref: "Article"}],
-    location: String
+    country: String
   },
   {
     timestamps: true,
