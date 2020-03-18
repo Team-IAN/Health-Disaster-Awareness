@@ -16,37 +16,37 @@ class User_Feed extends Component {
         return this.state.articles.map((eachArticle, index) => {
             return <Fragment key={index}>
                 <div><a href={eachArticle.url} target="_blank"> <img src={eachArticle.urlToImage} /><br />{eachArticle.title}</a>
-                <p>Liked by {eachArticle.users.length} user(s).</p>
-            </div>
-            <form onSubmit={this.handleSubmit} name={eachArticle.url}>
-            <input type="submit" value="Like" />
-          </form>
-          </Fragment>
+                    <p>Liked by {eachArticle.users.length} user(s).</p>
+                </div>
+                <form onSubmit={this.handleSubmit} name={eachArticle.url}>
+                    <input type="submit" value="Like" />
+                </form>
+            </Fragment>
         })
     }
     findDetails = (articleURL) => {
         console.log(articleURL)
         let theArticle = this.props.newsEvents.articles.find(eachArticle => {
-          return eachArticle.url.includes(articleURL);
+            return eachArticle.url.includes(articleURL);
         });
         console.log(theArticle);
         return theArticle;
-      };
-        handleSubmit = e => {
+    };
+    handleSubmit = e => {
         e.preventDefault();
         console.log("article reference: ", e.target.name)
         let theArticle = this.findDetails(e.target.name);
         console.log("handleSubmit", theArticle)
         actions
-          .likeArticle(theArticle) // {title: userInput}
-          .then(resback => {
-            // this.props.setUser(resback.data) not sure what this is here for
-            // this.setState()
-            console.log(resback)
-          })
-          
-          .catch(({ response }) => console.error(response));
-      };
+            .likeArticle(theArticle) // {title: userInput}
+            .then(resback => {
+                // this.props.setUser(resback.data) not sure what this is here for
+                // this.setState()
+                console.log(resback)
+            })
+
+            .catch(({ response }) => console.error(response));
+    };
     render() {
         console.log("user_feed props:", this.props)
         return (

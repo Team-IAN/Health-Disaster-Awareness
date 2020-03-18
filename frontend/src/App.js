@@ -93,6 +93,7 @@ class App extends Component {
                 {...props}
                 newsEvents={this.state.newsEvents}
                 ready={this.state.ready}
+                setUser={this.setUser}
               />
             )}
           />
