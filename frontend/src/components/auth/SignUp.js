@@ -23,7 +23,7 @@ class SignUp extends Component {
         console.log(user);
         this.props.setUser({ ...user.data });
         this.props.history.push("/home");
-        this.props.apiCall(user)
+        this.props.apiCall(user);
       })
       .catch(({ response }) => console.error(response.data));
   };
@@ -35,23 +35,38 @@ class SignUp extends Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
-            <Form.Control name="userName" type="text" onChange={this.handleChange} />
+            <Form.Control
+              name="userName"
+              type="text"
+              placeholder="Enter username"
+              onChange={this.handleChange}
+            />
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group className="text-center" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="email" type="text" onChange={this.handleChange} />
+            <Form.Control
+              name="email"
+              type="text"
+              placeholder="Enter email"
+              onChange={this.handleChange}
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
-           </Form.Text>
+            </Form.Text>
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group className="text-center" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control name="password" type="password" onChange={this.handleChange} />
+            <Form.Control
+              name="password"
+              type="password"
+              placeholder="Enter password"
+              onChange={this.handleChange}
+            />
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group className="text-center" controlId="formBasicPassword">
             <Form.Label>Location</Form.Label>
             {/* <Form.Control name="location" type="text" onChange={this.handleChange} /> */}
             <br></br>
