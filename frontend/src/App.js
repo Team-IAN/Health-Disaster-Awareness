@@ -18,13 +18,6 @@ import Navbar2 from "./components/navbar/Navbar2"
 
 let apiKey = "3d317330f7724477a808676552aeec15"
 
-var url = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`
-
-// var headers = {
-//   "X-Api-Key": 
-// };
-
-
 class App extends Component {
   state = {
     newsEvents: [],
@@ -33,8 +26,18 @@ class App extends Component {
 
   async componentDidMount() {
     let user = await actions.isLoggedIn();
-    this.setState({ ...user.data });
+    await this.setState({ ...user.data });
+    console.log(user.data.location)
+    this.apiCall(user)
+  }
+
+   apiCall = async (user) => {
+    var url = `http://newsapi.org/v2/top-headlines?country=${user.data.location}&category=health&apiKey=${apiKey}`
+    // var usUrl = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`
     let newsEvents = await axios.get(url);
+    // if(newsEvents.data.length === 0) {
+    //   newsEvents = await axios.get(usUrl);
+    // }
     console.log(newsEvents.data);
 
     this.setState({
@@ -73,7 +76,7 @@ class App extends Component {
           <Route
             exact
             path="/log-in"
-            render={props => <LogIn {...props} setUser={this.setUser} />}
+            render={props => <LogIn {...props} setUser={this.setUser} apiCall={this.apiCall}/>}
           />
           <Route
             exact

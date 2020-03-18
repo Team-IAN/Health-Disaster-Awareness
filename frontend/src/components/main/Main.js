@@ -32,6 +32,7 @@ class Main extends Component {
       .likeArticle(article) // {title: userInput}
       .then(resback => {
         console.log(resback);
+        this.props.history.push("/home");
       })
       .catch(({ response }) => console.error(response));
   };

@@ -14,33 +14,8 @@ class User_Feed extends Component {
         })
     }
 
-    // findDetails = (articleURL) => {
-    //     console.log(articleURL)
-    //     let theArticle = this.props.newsEvents.articles.find(eachArticle => {
-    //         return eachArticle.url.includes(articleURL);
-    //     });
-    //     console.log(theArticle);
-    //     return theArticle;
-    // };
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     console.log("article reference: ", e.target.name)
-    //     let theArticle = this.findDetails(e.target.name);
-    //     console.log("handleSubmit", theArticle)
-    //     actions
-    //         .likeArticle(theArticle) // {title: userInput}
-    //         .then(resback => {
-    //             // this.props.setUser(resback.data) not sure what this is here for
-    //             // this.setState()
-    //             console.log(resback)
-    //         })
-
-    //         .catch(({ response }) => console.error(response));
-    // };
-
     handleSubmit = (e, article) => {
         e.preventDefault();
-        // let theArticle = this.findDetails();
         actions
           .likeArticle(article) // {title: userInput}
           .then(resback => {

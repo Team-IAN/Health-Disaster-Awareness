@@ -13,6 +13,7 @@ class LogIn extends Component {
         console.log(user)
         this.props.setUser({ ...user.data });
         this.props.history.push("/home");
+        this.props.apiCall(user)
       })
       .catch(({ response }) => console.error(response.data));
   };
