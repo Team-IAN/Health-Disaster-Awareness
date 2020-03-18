@@ -8,7 +8,7 @@ class Home extends Component {
     //actions.test()
   }
   render() {
-    return <div></div>
+    return <div></div>;
   }
 }
 
