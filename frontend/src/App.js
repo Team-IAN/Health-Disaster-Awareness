@@ -71,7 +71,7 @@ class App extends Component {
           <Route
             exact
             path="/sign-up"
-            render={props => <SignUp {...props} setUser={this.setUser} />}
+            render={props => <SignUp {...props} setUser={this.setUser} apiCall={this.apiCall} />}
           />
           <Route
             exact

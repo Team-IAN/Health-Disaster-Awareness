@@ -14,6 +14,7 @@ class SignUp extends Component {
         console.log(user);
         this.props.setUser({ ...user.data });
         this.props.history.push("/home");
+        this.props.apiCall(user)
       })
       .catch(({ response }) => console.error(response.data));
   };
@@ -22,7 +23,7 @@ class SignUp extends Component {
   render() {
     return (
       <Fragment>
-        <h2>SignUP</h2>
+        {/* <h2>SignUP</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <p>Username</p>
@@ -50,7 +51,7 @@ class SignUp extends Component {
           </div>
           <br></br>
           <input type="submit" value="Sign Up" />
-        </form>
+        </form> */}
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
@@ -59,7 +60,7 @@ class SignUp extends Component {
 
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control name="userName" type="text" onChange={this.handleChange} />
+            <Form.Control name="email" type="text" onChange={this.handleChange} />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
            </Form.Text>
