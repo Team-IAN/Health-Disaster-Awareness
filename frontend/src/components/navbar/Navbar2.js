@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
+import { BrowserRouter as Router } from "react-router-dom";
 import actions from "../../services/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -38,8 +38,9 @@ class Navbar2 extends Component {
             <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/User_Feed">User Feed</Nav.Link>
-              <Nav.Link href="/Coronavirus">Corona Tracker</Nav.Link>
+              <Nav.Link href="/user-feed">User Feed</Nav.Link>
+              <Nav.Link href="/map">Map</Nav.Link>
+              <Nav.Link href="/prevention">Prevention</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="/profile">Profile</Nav.Link>
