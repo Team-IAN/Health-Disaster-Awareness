@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from "react";
-import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/home/Home";
-import NotFound from "./components/404/NotFound.js";
+// import NotFound from "./components/404/NotFound.js";
 import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
 import Profile from "./components/profile/Profile";
@@ -9,11 +9,11 @@ import Coronavirus from "./components/coronavirus/Coronavirus";
 import actions from "./services/index";
 import axios from "axios";
 import Main from "./components/main/Main";
-import PostArticle from "./components/Post_Article/PostArticle";
+import Prevention from "./components/prevention/Prevention"
 import ArticleDetails from "./components/article/ArticleDetails";
 import User_Feed from "./components/user_feed/User_Feed";
-import Navbar from "./components/navbar/Navbar"
-import Navbar2 from "./components/navbar/Navbar2"
+import Navbar2 from "./components/navbar/Navbar2";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 let apiKey = "3d317330f7724477a808676552aeec15"
@@ -85,8 +85,13 @@ class App extends Component {
           />
           <Route
             exact
-            path="/Coronavirus"
+            path="/map"
             render={props => <Coronavirus {...props} user={this.state} />}
+          />
+          <Route
+            exact
+            path="/prevention"
+            render={props => <Prevention {...props} user={this.state} />}
           />
           <Route
             exact
@@ -125,7 +130,7 @@ class App extends Component {
           />
           <Route
             exact
-            path="/User_Feed"
+            path="/user-feed"
             render={props => (
               <User_Feed
                 {...props}
