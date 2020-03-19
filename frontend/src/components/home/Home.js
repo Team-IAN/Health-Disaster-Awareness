@@ -41,7 +41,7 @@ class Home extends Component {
           </div>
         </Form.Group>
         <Form.Row className="quick-signup">
-          <Col sm={3}>
+          {/* <Col sm={3}>
             <Form.Control
               size="lg"
               name="email"
@@ -49,7 +49,15 @@ class Home extends Component {
               type="email"
               placeholder="Email"
             />
-          </Col>
+          </Col> */}
+          <Button
+            className="btn-lg btd-dark btn-success"
+            variant="primary"
+            type="submit"
+            href="/log-in"
+          >
+            Log In
+          </Button>
           <Col>
             <Button
               className="btn-lg btd-dark btn-success"
