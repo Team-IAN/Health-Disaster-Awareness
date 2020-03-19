@@ -1,10 +1,7 @@
-import React, { Component, Fragment, useState } from "react";
-import { Form, Button, FormControl, Dropdown } from "react-bootstrap";
+import React, { Component, Fragment } from "react";
+import { Form, Button } from "react-bootstrap";
 import actions from "../../services/index";
-import {
-  CountryDropdown,
-  CountryRegionData
-} from "react-country-region-selector";
+import { CountryDropdown } from "react-country-region-selector";
 
 class SignUp extends Component {
   state = {
@@ -32,7 +29,6 @@ class SignUp extends Component {
   };
 
   render() {
-    const { country } = this.state;
     return (
       <Fragment>
         <br></br>

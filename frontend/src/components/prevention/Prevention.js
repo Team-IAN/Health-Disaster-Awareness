@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import CarouselPage from '../carousel/CarouselPage'
 import YouTube from 'react-youtube';
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
-  "mdbreact";
+import { MDBContainer } from "mdbreact";
 
 class Prevention extends Component {
 

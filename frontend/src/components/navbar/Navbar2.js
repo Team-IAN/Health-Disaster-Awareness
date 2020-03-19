@@ -20,7 +20,7 @@ class Navbar2 extends Component {
   setUser = user => this.setState(user);
 
   logOut = async () => {
-    let res = await actions.logOut();
+    await actions.logOut();
     this.setUser({
       email: null,
       createdAt: null,

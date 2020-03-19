@@ -12,7 +12,7 @@ import axios from "axios";
 import Main from "./components/main/Main";
 import Prevention from "./components/prevention/Prevention"
 import ArticleDetails from "./components/article/ArticleDetails";
-import User_Feed from "./components/user_feed/User_Feed";
+import UserFeed from "./components/user_feed/User_Feed";
 import Navbar2 from "./components/navbar/Navbar2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -50,7 +50,7 @@ class App extends Component {
   setUser = user => this.setState(user);
 
   logOut = async () => {
-    let res = await actions.logOut();
+   await actions.logOut();
     this.setUser({
       email: null,
       createdAt: null,
@@ -138,7 +138,7 @@ class App extends Component {
             exact
             path="/user-feed"
             render={props => (
-              <User_Feed
+              <UserFeed
                 {...props}
                 user={this.state}
                 newsEvents={this.state.newsEvents}
