@@ -113,42 +113,36 @@ code {
 .homePageImage {
   /* display: block; */
   /* margin-left: auto; */
-  width: 40%;
+  width: 50%;
   position: absolute;
   top: 25%;
   left: 60%;
   margin-top: -30px;
-  margin-left: -100px;
+  margin-left: -160px;
   border-radius: 8px;
 }
 
 .frontTop {
+  padding-left: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
   display: block;
-  /* margin-left: auto; */
   width: 40%;
-  position: fixed;
-  top: 25%;
-  right: 60%;
-  margin-top: -30px;
-  margin-right: -100px;
   color: #007bff;
 }
 
 .frontBottom {
   display: block;
+  padding-top: 10px;
+  padding-left: 30px;
   /* margin-left: auto; */
-  width: 40%;
-  position: fixed;
-  top: 50%;
+  width: 35%;
   right: 60%;
-  margin-top: -80px;
-  margin-right: -100px;
 }
 
 .quick-signup {
-  position: absolute;
-  bottom: 170px;
+  padding-top: 10px;
+  padding-left: 30px;
   width: 100%;
-  left: 7%;
   width: 35%;
 }

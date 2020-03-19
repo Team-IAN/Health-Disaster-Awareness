@@ -28,6 +28,7 @@ class Navbar2 extends Component {
       userName: null
     }); //FIX
   };
+  
   render() {
     return (
       <div>
