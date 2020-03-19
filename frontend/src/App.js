@@ -28,8 +28,8 @@ class App extends Component {
   // ok
   async componentDidMount() {
     let user = await actions.isLoggedIn();
-    await this.setState({ ...user.data });
-    console.log(user.data.country)
+    this.setState({ ...user.data });
+    console.log(user)
     this.apiCall(user)
   }
 
