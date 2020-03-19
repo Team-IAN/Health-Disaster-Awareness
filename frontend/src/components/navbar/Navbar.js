@@ -15,63 +15,29 @@ toggleCollapse = () => {
 render() {
   return (
     <Router>
-      <MDBNavbar color="default-color" dark expand="md">
-        <MDBNavbarBrand>
-          <strong className="white-text">Navbar</strong>
-        </MDBNavbarBrand>
-        <MDBNavbarToggler onClick={this.toggleCollapse} />
-        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-          <MDBNavbarNav left>
-            <MDBNavItem active>
-              <MDBNavLink to="#!">Home</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="#!">Features</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                  <div className="d-none d-md-inline">Dropdown</div>
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="twitter" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="google-plus-g" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                  <MDBIcon icon="user" />
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBNavbar>
+      <Navbar sticky="top" bg="primary" variant="dark">
+            <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
+            <Nav className="mr-auto">
+              <Nav.Link href="/home">Latest News</Nav.Link>
+              <Nav.Link href="/user-feed">User Feed</Nav.Link>
+              <Nav.Link href="/map">Map</Nav.Link>
+              <Nav.Link href="/prevention">More Resources</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/profile">Profile</Nav.Link>
+              <Nav.Link onClick={this.logOut} href="/">Logout</Nav.Link>
+            </Nav>
+          </Navbar> :
+          <Navbar sticky="top" bg="primary" variant="dark">
+            <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
+            <Nav className="mr-auto">
+            </Nav>
+            <Nav>
+              <Nav.Link href="/sign-up">Sign Up</Nav.Link>
+              <Nav.Link href="/log-in">Login</Nav.Link>
+            </Nav>
+          </Navbar>
     </Router>
     );
   }

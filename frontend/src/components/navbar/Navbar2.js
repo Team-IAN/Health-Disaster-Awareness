@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Navbar, Nav,NavLink } from "react-bootstrap";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import actions from "../../services/index"
 
 class Navbar2 extends Component {
@@ -52,8 +52,8 @@ class Navbar2 extends Component {
             <Nav className="mr-auto">
             </Nav>
             <Nav>
-              <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-              <Nav.Link href="/log-in">Login</Nav.Link>
+              <Link to="/sign-up">Sign Up</Link>
+              <Link to="/log-in">Login</Link>
             </Nav>
           </Navbar>
         }
