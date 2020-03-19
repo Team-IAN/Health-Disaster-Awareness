@@ -143,4 +143,6 @@ code {
 .quick-signup {
   padding-top: 10px;
   padding-left: 30px;
+  display: inline-block;
+  align-items: left;
 }
