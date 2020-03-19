@@ -25,6 +25,7 @@ class App extends Component {
     ready: false
   };
 
+  // ok
   async componentDidMount() {
     let user = await actions.isLoggedIn();
     await this.setState({ ...user.data });
