@@ -85,6 +85,12 @@ code {
   text-align: center;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
 .aboutTop {
   text-align: center;
   padding-left: 120px;
