@@ -85,6 +85,12 @@ code {
   text-align: center;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
 .aboutTop {
   text-align: center;
   padding-left: 120px;
@@ -105,45 +111,43 @@ code {
 }
 
 .homePageImage {
-  padding-top: 20px;
-  display: block;
+  /* display: block; */
   /* margin-left: auto; */
   width: 40%;
-  position: fixed;
+  position: absolute;
   top: 25%;
   left: 60%;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-left: -100px;
+  border-radius: 8px;
 }
 
 .frontTop {
-  padding-top: 20px;
   display: block;
   /* margin-left: auto; */
   width: 40%;
   position: fixed;
   top: 25%;
   right: 60%;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-right: -100px;
   color: #007bff;
 }
 
 .frontBottom {
-  padding-top: 20px;
   display: block;
   /* margin-left: auto; */
   width: 40%;
   position: fixed;
   top: 50%;
   right: 60%;
-  margin-top: -50px;
+  margin-top: -80px;
   margin-right: -100px;
 }
 
 .quick-signup {
   position: absolute;
-  bottom: 150px;
+  bottom: 170px;
   width: 100%;
   left: 7%;
 }

@@ -25,15 +25,16 @@ class App extends Component {
     ready: false
   };
 
+  // ok
   async componentDidMount() {
     let user = await actions.isLoggedIn();
-    await this.setState({ ...user.data });
-    console.log(user.data.country)
+    this.setState({ ...user.data });
+    console.log(user)
     this.apiCall(user)
   }
 
    apiCall = async (user) => {
-    var url = `http://newsapi.org/v2/top-headlines?country=${user.data.country}&category=health&apiKey=${apiKey}`
+    var url = `https://newsapi.org/v2/top-headlines?country=${user.data.country}&category=health&apiKey=${apiKey}`
     // var usUrl = `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`
     let newsEvents = await axios.get(url);
     // if(newsEvents.data.length === 0) {
