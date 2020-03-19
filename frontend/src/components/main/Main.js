@@ -45,7 +45,7 @@ class Main extends Component {
               <Fragment style={{ textDecoration: 'none' }} key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}>
                 <Row>
                   <Col xs={6} md={4}>
-                    <Image src={eachArticle.urlToImage} alt='Sorry, the image does not exist ¯\_(ツ)_/¯ ' thumbnail fluid />
+                    <Image src={eachArticle.urlToImage} alt="No image found" thumbnail fluid />
                   </Col>
                   <Col>
                     <Accordion>

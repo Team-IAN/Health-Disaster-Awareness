@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router } from "react-router-dom";
 import actions from "../../services/index"
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Navbar2 extends Component {
   state = {
