@@ -28,7 +28,7 @@ const debug = require("debug")(
 );
 
 const app = express();
-
+console.log("pineapple");
 app.use(
   cors({
     credentials: true,

@@ -7,6 +7,7 @@ process.env.NODE_ENV === "production"
   : (baseURL = "http://localhost:5000");
 
 const service = axios.create({ withCredentials: true, baseURL });
+console.log(service, baseURL)
 
 const actions = {
   isLoggedIn: async () => {
