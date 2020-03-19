@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Navbar, Nav,NavLink } from "react-bootstrap";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import actions from "../../services/index"
+import { Navbar, Nav } from 'react-bootstrap'
 
 class Navbar2 extends Component {
   state = {
     isOpen: false
   };
-  
+
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
@@ -31,9 +30,9 @@ class Navbar2 extends Component {
   };
   render() {
     return (
-      <Router>
+      <div>
         {this.props.email ?
-          <Navbar sticky="top" bg="primary" variant="dark">
+        <Navbar sticky="top" bg="primary" variant="dark">
             <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/home">Latest News</Nav.Link>
@@ -46,18 +45,19 @@ class Navbar2 extends Component {
               <Nav.Link href="/profile">Profile</Nav.Link>
               <Nav.Link onClick={this.logOut} href="/">Logout</Nav.Link>
             </Nav>
-          </Navbar> :
+          </Navbar>
+    :
           <Navbar sticky="top" bg="primary" variant="dark">
             <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
             </Nav>
             <Nav>
-              <Link to="/sign-up">Sign Up</Link>
-              <Link to="/log-in">Login</Link>
+              <Nav.Link href="/sign-up">Sign Up</Nav.Link>
+              <Nav.Link href="/log-in">Login</Nav.Link>
             </Nav>
           </Navbar>
-        }
-      </Router>
+  }
+      </div>
     );
   }
 }
