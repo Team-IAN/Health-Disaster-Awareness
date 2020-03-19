@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 // import NotFound from "./components/404/NotFound.js";
 import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
+import About from "./components/about/About"
 import Profile from "./components/profile/Profile";
 import Coronavirus from "./components/coronavirus/Coronavirus";
 import actions from "./services/index";
@@ -82,6 +83,11 @@ class App extends Component {
             exact
             path="/profile"
             render={props => <Profile {...props} user={this.state} />}
+          />
+          <Route
+            exact
+            path="/about"
+            render={props => <About {...props} user={this.state} />}
           />
           <Route
             exact

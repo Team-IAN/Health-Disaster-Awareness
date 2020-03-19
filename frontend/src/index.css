@@ -77,3 +77,22 @@ code {
 .topHeadlines {
   text-align: center;
 }
+
+.aboutTop {
+  text-align: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 20px;
+}
+
+.aboutLinks {
+  text-align: center;
+}
+
+.worldHealth {
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%
+}
