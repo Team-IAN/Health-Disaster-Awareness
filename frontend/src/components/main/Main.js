@@ -45,7 +45,7 @@ class Main extends Component {
               <Fragment style={{ textDecoration: 'none' }} key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}>
                 <Row>
                   <Col xs={6} md={4}>
-                    <Image src={eachArticle.urlToImage} alt="No image found" thumbnail fluid />
+                    <Image alt="No image found" thumbnail fluid src={eachArticle.urlToImage || "https://cdn.discordapp.com/attachments/687291089081597987/689576474818248748/logo2.png"}  />
                   </Col>
                   <Col>
                     <Accordion>
