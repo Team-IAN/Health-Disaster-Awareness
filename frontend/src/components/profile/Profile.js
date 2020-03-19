@@ -27,8 +27,8 @@ state = {
     render() {
         return (
             <div>
-                <div className="favoriteFeed"><h1>Favorite tiles here</h1></div>
-                {this.showLikedArticles()}
+                <div className="favoriteFeed"><p>Welcome to your profile.</p></div>
+                {/* {this.showLikedArticles()} */}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}
             </div>
         );
