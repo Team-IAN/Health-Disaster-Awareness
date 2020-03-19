@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import { Link } from 'react-router-dom';
-import ArticleDetails from "../article/ArticleDetails";
 import { Image, Col, Row, Accordion, Card, Button } from 'react-bootstrap';
 import actions from "../../services/index";
+import NextButton from './NextButton';
+
 
 class Main extends Component {
   // state = {
@@ -94,6 +94,7 @@ class Main extends Component {
           <h1>Top Headlines</h1>
         </div>
         {this.props.ready ? this.showArticles() : " "}
+        <NextButton></NextButton>
       </div>
     );
   }

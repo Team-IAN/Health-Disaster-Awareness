@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
   "mdbreact";
 
@@ -23,7 +23,7 @@ const CarouselPage = () => {
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html" target="_blank">
+              <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html" target="_blank" rel="noopener noreferrer">
                 <h3 className="h3-responsive">Prevention</h3>
                 <p className="slideinfo">CDC instructions</p></a>
             </MDBCarouselCaption>
@@ -38,7 +38,7 @@ const CarouselPage = () => {
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html" target="_blank">
+              <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html" target="_blank" rel="noopener noreferrer">
                 <h3 className="h3-responsive">Feeling sick?</h3>
                 <p className="slideinfo">Here's what to do</p></a>
             </MDBCarouselCaption>
@@ -53,7 +53,7 @@ const CarouselPage = () => {
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <a href="https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center" target="_blank">
+              <a href="https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center" target="_blank" rel="noopener noreferrer">
                 <h3 className="h3-responsive">Coronavirus Resource Center</h3>
                 <p className="slideinfo">More info</p></a>
             </MDBCarouselCaption>
