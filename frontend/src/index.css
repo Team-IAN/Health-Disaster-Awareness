@@ -143,6 +143,6 @@ code {
 .quick-signup {
   padding-top: 10px;
   padding-left: 30px;
-  width: 20%;
-  display: block;
+  justify-content: left;
+  width: 40%;
 }
