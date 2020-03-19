@@ -29,20 +29,20 @@ const debug = require("debug")(
 
 const app = express();
 
-app.use(
-  cors({
-    credentials: true,
-    origin: ["http://localhost:3000", "https://covid-19-tracker.netlify.com"] //Swap this with the client url
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: ["http://localhost:3000", "https://covid-19-tracker.netlify.com"] //Swap this with the client url
+//   })
+// );
 
-// app.use(cors({
-//   origin: function(origin, callback){
-//     return callback(null, true);
-//   },
-//   optionsSuccessStatus: 200,
-//   credentials: true
-// }));
+app.use(cors({
+  origin: function(origin, callback){
+    return callback(null, true);
+  },
+  optionsSuccessStatus: 200,
+  credentials: true
+}));
 
 app.use(
   session({
