@@ -9,16 +9,15 @@ class About extends Component {
                     <p>This project is developed by Nate Falconer, Alex Costan, and Igor Zelenov.</p>
                 </div>
                 <div className="aboutLinks">
-                    <a href="https://github.com/Team-IAN/Health-Disaster-Awareness" target="_blank">GitHub</a>
+                    <a href="https://github.com/Team-IAN/Health-Disaster-Awareness" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <br />
-                    <a href="https://www.linkedin.com/in/nathanfalconer/" target="_blank">Nate's LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/nathanfalconer/" target="_blank" rel="noopener noreferrer">Nate's LinkedIn</a>
                     <br />
-                    <a href="https://www.linkedin.com/in/alex-costan/" target="_blank">Alex's LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/alex-costan/" target="_blank" rel="noopener noreferrer">Alex's LinkedIn</a>
                     <br />
-                    <a href="https://www.linkedin.com/in/igorzelenov/" target="_blank">Igor's LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/igorzelenov/" target="_blank" rel="noopener noreferrer">Igor's LinkedIn</a>
                 </div>
-                <img className="worldHealth" src={process.env.PUBLIC_URL + '/wh.jpg'} />
-
+                <img className="worldHealth" src={process.env.PUBLIC_URL + '/wh.jpg'} alt='world health' />
             </div>
         );
     }

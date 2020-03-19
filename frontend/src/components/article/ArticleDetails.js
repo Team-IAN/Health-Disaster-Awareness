@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PostArticle from "../Post_Article/PostArticle";
 import actions from "../../services/index"
-import User_Feed from "../user_feed/User_Feed"
 
 class ArticleDetails extends Component {
 

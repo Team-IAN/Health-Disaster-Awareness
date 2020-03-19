@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import { Link } from 'react-router-dom';
-import ArticleDetails from "../article/ArticleDetails";
 import { Image, Col, Row, Accordion, Card, Button } from 'react-bootstrap';
 import actions from "../../services/index";
+import NextButton from './NextButton';
+
 
 class Main extends Component {
   // state = {
@@ -45,7 +45,7 @@ class Main extends Component {
               <Fragment style={{ textDecoration: 'none' }} key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}>
                 <Row>
                   <Col xs={6} md={4}>
-                    <Image src={eachArticle.urlToImage} alt='Sorry, the image does not exist ¯\_(ツ)_/¯ ' thumbnail fluid />
+                    <Image alt="No image found" thumbnail fluid src={eachArticle.urlToImage || "https://cdn.discordapp.com/attachments/687291089081597987/689576474818248748/logo2.png"}  />
                   </Col>
                   <Col>
                     <Accordion>
@@ -94,6 +94,7 @@ class Main extends Component {
           <h1>Top Headlines</h1>
         </div>
         {this.props.ready ? this.showArticles() : " "}
+        <NextButton></NextButton>
       </div>
     );
   }

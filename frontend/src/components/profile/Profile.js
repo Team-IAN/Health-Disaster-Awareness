@@ -14,7 +14,7 @@ state = {
     }
     showLikedArticles = () => {
         return this.state.articles.map(eachArticle => {
-        return <li><a href={eachArticle.url} target="_blank">{eachArticle.title}</a>
+        return <li><a href={eachArticle.url} target="_blank" rel="noopener noreferrer">{eachArticle.title}</a>
          Shared by: {eachArticle.userName}
         </li>
             

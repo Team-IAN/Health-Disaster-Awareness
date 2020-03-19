@@ -2,9 +2,6 @@ import React, { Component, Fragment } from "react";
 import actions from "../../services/index";
 import {
   Form,
-  FormGroup,
-  FormControl,
-  FormLabel,
   Button
 } from "react-bootstrap";
 
