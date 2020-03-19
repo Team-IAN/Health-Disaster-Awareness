@@ -17,27 +17,29 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <div>
-          <div className="frontTop">
-            <h1>Welcome to the COVID-19 Tracker.</h1>
+        <Form.Group>
+          <div>
+            <div className="frontTop">
+              <h1>Welcome to the COVID-19 Tracker.</h1>
+            </div>
+            <div className="frontBottom">
+              <h3>
+                Get the latest Coronavirus information here, tailored to your
+                location.
+              </h3>
+              <br></br>
+              <h4>
+                Like your favorite articles and check the User Feed to see what
+                other users have Liked.
+              </h4>
+            </div>
+            <img
+              className="homePageImage"
+              src={"/bacteria-disease.jpg"}
+              alt="home image"
+            />
           </div>
-          <div className="frontBottom">
-            <h3>
-              Get the latest Coronavirus information here, tailored to your
-              location.
-            </h3>
-            <br></br>
-            <h4>
-              Like your favorite articles and check the User Feed to see what
-              other users have Liked.
-            </h4>
-          </div>
-          <img
-            className="homePageImage"
-            src={"/bacteria-disease.jpg"}
-            alt="home image"
-          />
-        </div>
+        </Form.Group>
         <Form.Row className="quick-signup">
           <Col sm={3}>
             <Form.Control

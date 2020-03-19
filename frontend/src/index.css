@@ -142,4 +142,8 @@ code {
 }
 
 .quick-signup {
+  position: absolute;
+  bottom: 150px;
+  width: 100%;
+  left: 7%;
 }
