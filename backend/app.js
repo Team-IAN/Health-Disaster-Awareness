@@ -36,6 +36,7 @@ app.use(
   })
 );
 
+
 // app.use(cors({
 //   origin: function(origin, callback){
 //     return callback(null, true);
@@ -71,6 +72,8 @@ const postArticle = require("./routes/article");
 app.use("/", index);
 app.use("/", auth);
 app.use("/", postArticle);
+
+
 
 // Uncomment this line for production
 let client = path.join(__dirname + "../public/index.html");

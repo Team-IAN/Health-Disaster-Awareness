@@ -4,10 +4,13 @@ const User = require('../models/User');
 const passport = require('../config/passport');
 
 router.post('/signup', (req, res, next) => {
+  console.log(res.headers, req.headers)
   User.register(req.body, req.body.password)
     .then((user) => { 
         req.login(user, function(err,result){
+          
           res.status(201).json(user)
+          
         })
     })
     .catch((err) => { 
