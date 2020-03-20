@@ -70,8 +70,10 @@ class User_Feed extends Component {
         console.log("user_feed props:", this.props)
         return (
             <div>
-              <div className="favFeed">
-                <div className="favoriteFeed"><h1>Recently Liked Articles</h1></div>
+            <br></br>
+              <div className="topHeadlines">
+                <div className="topHeadlines"><h1>Recently Liked Articles</h1></div>
+                <br></br>
                 {this.showLikedArticles()}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}
                 </div>

@@ -90,9 +90,11 @@ class Main extends Component {
         {/* <div className="coronaTracker">
             <h1>Corona Tracker here</h1>
           </div> */}
+          <br></br>
         <div className="topHeadlines">
           <h1>Top Headlines</h1>
         </div>
+        <br></br>
         <div className="favFeed">
         {this.props.ready ? <Fragment > {this.showArticles()} <div className="pagination"> </div> </Fragment> : " "}
         </div>
