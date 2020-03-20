@@ -94,7 +94,7 @@ class Main extends Component {
           <h1>Top Headlines</h1>
         </div>
         <div className="favFeed">
-        {this.props.ready ? <Fragment > {this.showArticles()} <div className="pagination"> <NextButton></NextButton> </div> </Fragment> : " "}
+        {this.props.ready ? <Fragment > {this.showArticles()} <div className="pagination"> </div> </Fragment> : " "}
         </div>
       </div>
     );

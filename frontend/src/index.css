@@ -144,7 +144,7 @@ code {
   padding-top: 10px;
   padding-left: 30px;
   justify-content: left;
-  width: 20%;
+  max-width: 20%;
 }
 
 .artImages {
@@ -152,5 +152,5 @@ code {
 }
 
 .favFeed {
-  padding-right: 15px;
+  padding-right: 8px;
 }
