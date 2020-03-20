@@ -50,6 +50,14 @@ class Home extends Component {
               placeholder="Email"
             />
           </Col> */}
+          <Button
+            className="btn-lg btd-dark btn-success"
+            variant="primary"
+            type="submit"
+            href="/log-in"
+          >
+            Login
+          </Button>
           <Col>
             <Button
               className="btn-lg btd-dark btn-success"
@@ -59,14 +67,6 @@ class Home extends Component {
             >
               Sign Up
             </Button>
-            <Button
-            className="btn-lg btd-dark btn-success"
-            variant="primary"
-            type="submit"
-            href="/log-in"
-          >
-            Login
-          </Button>
           </Col>
         </Form.Row>
       </Fragment>
