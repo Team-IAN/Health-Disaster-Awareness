@@ -43,7 +43,6 @@ class Navbar2 extends Component {
             </Nav>
             <Nav>
               <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/profile">Profile</Nav.Link>
               <Nav.Link onClick={this.logOut} href="/">Logout</Nav.Link>
             </Nav>
           </Navbar>
