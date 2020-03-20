@@ -28,9 +28,11 @@ class User_Feed extends Component {
             return <Fragment key={index}>
               <Fragment style={{ textDecoration: 'none' }} key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}>
                 <Row>
+
                   <Col xs={6} md={4}>
                   <Image alt="No image found" thumbnail fluid src={eachArticle.urlToImage || "https://cdn.discordapp.com/attachments/687291089081597987/689576474818248748/logo2.png"}  />
                   </Col>
+            
                   <Col>
                     <Accordion>
                       <Card>
@@ -68,9 +70,11 @@ class User_Feed extends Component {
         console.log("user_feed props:", this.props)
         return (
             <div>
+              <div className="favFeed">
                 <div className="favoriteFeed"><h1>Recently Liked Articles</h1></div>
                 {this.showLikedArticles()}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}
+                </div>
             </div>
         );
     }

@@ -45,7 +45,7 @@ class Main extends Component {
               <Fragment style={{ textDecoration: 'none' }} key={eachArticle.publishedAt} to={`/article-details/${eachArticle.publishedAt}`}>
                 <Row>
                   <Col xs={6} md={4}>
-                    <Image alt="No image found" thumbnail fluid src={eachArticle.urlToImage || "https://cdn.discordapp.com/attachments/687291089081597987/689576474818248748/logo2.png"}  />
+                    <Image className="artImages" alt="No image found" thumbnail fluid src={eachArticle.urlToImage || "https://cdn.discordapp.com/attachments/687291089081597987/689576474818248748/logo2.png"}  />
                   </Col>
                   <Col>
                     <Accordion>
@@ -93,7 +93,9 @@ class Main extends Component {
         <div className="topHeadlines">
           <h1>Top Headlines</h1>
         </div>
+        <div className="favFeed">
         {this.props.ready ? <Fragment > {this.showArticles()} <div className="pagination"> <NextButton></NextButton> </div> </Fragment> : " "}
+        </div>
       </div>
     );
   }

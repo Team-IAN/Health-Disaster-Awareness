@@ -146,3 +146,11 @@ code {
   justify-content: left;
   width: 20%;
 }
+
+.artImages {
+  padding-left: 4px;
+}
+
+.favFeed {
+  padding-right: 15px;
+}
