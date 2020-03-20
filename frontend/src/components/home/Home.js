@@ -56,7 +56,7 @@ class Home extends Component {
             type="submit"
             href="/log-in"
           >
-            Log In
+            Login
           </Button>
           <Col>
             <Button

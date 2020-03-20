@@ -28,13 +28,13 @@ class Navbar2 extends Component {
       userName: null
     }); //FIX
   };
-  
+
   render() {
     return (
       <div>
         {this.props.email ?
         <Navbar sticky="top" bg="primary" variant="dark">
-            <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
+            <Navbar.Brand>COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/home">Latest News</Nav.Link>
               <Nav.Link href="/user-feed">User Feed</Nav.Link>
@@ -49,7 +49,7 @@ class Navbar2 extends Component {
           </Navbar>
     :
           <Navbar sticky="top" bg="primary" variant="dark">
-            <Navbar.Brand href="/home">COVID-19 Tracker</Navbar.Brand>
+            <Navbar.Brand>COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
             </Nav>
             <Nav>
