@@ -67,7 +67,7 @@ class App extends Component {
         {/* {this.state.userName} */}
         {/* <NavLink to="/upload-image">Upload Image</NavLink> */}
         {/* <Navbar email={this.state.email} /> */}
-        <Navbar2 email={this.state.email} />
+        <Navbar2 className="navB" email={this.state.email} />
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
           <Route
