@@ -36,10 +36,10 @@ class Navbar2 extends Component {
         <Navbar sticky="top" bg="primary" variant="dark">
             <Navbar.Brand>COVID-19 Tracker</Navbar.Brand>
             <Nav className="mr-auto">
-              <Nav.Link href="/home">Latest News</Nav.Link>
+              <Nav.Link href="/home">News</Nav.Link>
               <Nav.Link href="/user-feed">User Feed</Nav.Link>
               <Nav.Link href="/map">Map</Nav.Link>
-              <Nav.Link href="/prevention">More Resources</Nav.Link>
+              <Nav.Link href="/prevention">More</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="/about">About</Nav.Link>
