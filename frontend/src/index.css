@@ -109,32 +109,11 @@ code {
   width: 35%;
 }
 
-.homePageImage {
-  /* display: block; */
-  /* margin-left: auto; */
-  width: 50%;
-  position: absolute;
-  top: 25%;
-  left: 60%;
-  margin-top: -30px;
-  margin-left: -160px;
-  border-radius: 8px;
-}
-
-.frontTop {
-  padding-left: 30px;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  width: 40%;
-  text-align: left;
-  color: #007bff;
-}
 
 .frontBottom {
   padding-top: 10px;
   padding-left: 30px;
   text-align: left;
-  /* margin-left: auto; */
   width: 35%;
   right: 60%;
 }
@@ -152,4 +131,42 @@ code {
 
 .favFeed {
   padding-right: 8px;
+}
+
+.frontBlock {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly;
+  /* margin: auto; */
+}
+
+
+.frontTop {
+  padding-left: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 600px;
+  max-width: 40%;
+  text-align: left;
+  color: #007bff;
+}
+
+.homePageImage {
+  padding-top: 40px;
+  width: 600px;
+  max-width: 40%;
+  justify-content: flex-end;
+  float: right;
+}
+
+.frontButtons {
+  display: flex;
+  width: 195px;
+  padding-top: 30px;
+  justify-content: space-evenly;
+
+}
+
+.button2 {
+  padding-left: 10px;
 }
