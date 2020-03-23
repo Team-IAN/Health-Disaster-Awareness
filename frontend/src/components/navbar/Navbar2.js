@@ -52,6 +52,7 @@ class Navbar2 extends Component {
             <Nav className="mr-auto">
             </Nav>
             <Nav>
+              <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/log-in">Login</Nav.Link>
               <Nav.Link href="/sign-up">Sign Up</Nav.Link>
             </Nav>
