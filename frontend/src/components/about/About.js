@@ -6,7 +6,7 @@ class About extends Component {
             <div>
                 <div className="aboutTop">
                     <h2>COVID-19 Tracker is designed to give you the latest news about COVID-19 based on your location.</h2>
-                    <p>This project is developed by Nate Falconer, Alex Costan, and Igor Zelenov.</p>
+                    <p>This project is developed by Nate Falconer, Alex Costan, and Igor Zelenov. Technologies used include React.js, Express.js, and MongoDB.</p>
                 </div>
                 <div className="aboutLinks">
                     <a href="https://github.com/Team-IAN/Health-Disaster-Awareness" target="_blank" rel="noopener noreferrer">GitHub</a>
