@@ -64,7 +64,7 @@ class Main extends Component {
                             <br></br>
                             <Button onClick={(e) => this.handleSubmit(e, eachArticle)} variant="primary" type="submit">
                               {/* <input name="comment" placeholder="Comment" type="text" onChange={this.handleChange} /> */}
-                                Like
+                                Share
                             </Button>
                             {' '}
                             <Button href={eachArticle.url} target="_blank">Read More</Button>

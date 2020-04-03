@@ -48,10 +48,10 @@ class User_Feed extends Component {
                             {eachArticle.content}
                             <br></br>
                             <br></br>
-                            <p>Liked by {eachArticle.users.length} user(s).</p>
+                            <p>Shared by {eachArticle.users.length} user(s).</p>
                             <Button onClick={(e) => this.handleSubmit(e, eachArticle)} variant="primary" type="submit">
                               {/* <input name="comment" placeholder="Comment" type="text" onChange={this.handleChange} /> */}
-                                Like
+                                Share
                             </Button>
                             {' '}
                             <Button href={eachArticle.url} target="_blank">Read More</Button>
@@ -71,7 +71,7 @@ class User_Feed extends Component {
         return (
             <div>
             <br></br>
-                <div className="topHeadlines"><h1>Recently Liked Articles</h1></div>
+                <div className="topHeadlines"><h1>Recently Shared Articles</h1></div>
                 <br></br>
                 {this.showLikedArticles()}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}
