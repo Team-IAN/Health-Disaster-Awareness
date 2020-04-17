@@ -71,7 +71,8 @@ class User_Feed extends Component {
         return (
             <div>
             <br></br>
-                <div className="topHeadlines"><h1>Recently Shared Articles</h1></div>
+                <div className="topHeadlines"><h1>Recently Shared
+                   Articles</h1></div>
                 <br></br>
                 {this.showLikedArticles()}
                 {/* <div className="sharedFeed"><h1>Shared feed here</h1></div> */}
@@ -79,4 +80,6 @@ class User_Feed extends Component {
         );
     }
 }
+
+// netlify test
 export default User_Feed;
