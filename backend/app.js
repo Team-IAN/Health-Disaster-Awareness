@@ -32,7 +32,7 @@ console.log("pineapple");
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://covid-19-tracker.netlify.com"] //Swap this with the client url
+    origin: ["http://localhost:3000", "https://covid-19-tracker.netlify.app"] //Swap this with the client url
   })
 );
 
